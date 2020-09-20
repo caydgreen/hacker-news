@@ -1,0 +1,22 @@
+.button {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: .75rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.button:hover:not([disabled]),
+.button:focus:not([disabled]),
+.button:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.active {
+  color: #0070f3;
+}

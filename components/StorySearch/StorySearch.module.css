@@ -1,0 +1,18 @@
+.result {
+  padding: .5rem;
+}
+
+.storySearch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: #0070f3;
+  border-radius: 5px;
+  color: white;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+}

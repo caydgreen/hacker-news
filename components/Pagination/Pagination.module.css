@@ -1,0 +1,15 @@
+.paginationOptions {
+  display: flex;
+  flex-direction: row;
+}
+
+.perPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageLimit {
+  display: flex;
+  flex-direction: row;
+}
