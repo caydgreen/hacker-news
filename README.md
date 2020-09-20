@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Created by Cayla Green using next.js
 
 ## Prompt
 
@@ -11,9 +11,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Have some styling to the UI - You don’t have to spend a ton of time on this, but try to make the UI/UX fairly usable
 
 
-## Getting Started
-
-First, run the development server:
+## Running the App
 
 ```bash
 npm run dev
