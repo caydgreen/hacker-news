@@ -20,7 +20,6 @@ const StorySearch = ({ items }) => {
       <input
         type="search"
         placeholder="Search stories..."
-        className={styles.seatchBar}
         value={searchTerm}
         onChange={handleInputChange}
       />
@@ -28,8 +27,14 @@ const StorySearch = ({ items }) => {
         <div className={styles.results}>
           {searchResults.map((story) => (
             <div className={styles.result}>
-              <a href={story.url} key={story.id}>
-                {story.title.length <= 10 ? story.title : `${story.title.slice(0, 15)}...`}
+              <a
+                rel="noreferrer noopener"
+                href={story.url}
+                target="_blank"
+                className={styles.title}
+                key={story.id}
+              >
+                {story.title.length <= 50 ? story.title : `${story.title.slice(0, 50)}...`}
               </a>
             </div>
           ))}
