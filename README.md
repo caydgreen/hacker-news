@@ -18,8 +18,19 @@ Created by Cayla Green using next.js
 
 ## Running the App
 
-```bash
-npm run dev
-# or
-yarn dev
+- unzip files
+- check that you have node installed
 ```
+node -v
+npm -v
+```
+- if you do not have node, install:
+```
+npm install npm@latest -g
+```
+- change to project directory and run dev
+```bash
+cd hacker-news-master
+yarn run dev
+```
+- open http://localhost:3000/
