@@ -3,12 +3,11 @@ import firebase from './base';
 import hackerNews from '../constants/hackerNews';
 
 const fetchy = async (options, success, failure) => {
-  const endpoint = options.endpoint;
+  const { endpoint } = options;
   delete options.endpoint;
 
   try {
-    let response = await firebase.fetch(`/${hackerNews.DB_VERSION}${endpoint}`, options);
-    
+    const response = await firebase.fetch(`/${hackerNews.DB_VERSION}${endpoint}`, options);
     success(response);
   } catch (error) {
     if (failure) {

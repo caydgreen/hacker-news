@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import StoryCard from '../StoryCard/StoryCard';
 import styles from './StoryList.module.css';
 
-const StoryList = ({items}) => {
-  return (
-    <>
+const StoryList = ({ items }) => (
+  <>
     <div className={styles.storyList}>
-      {items.map(story => (
+      {items.map((story) => (
         <StoryCard
           key={story.id}
           id={story.id}
@@ -14,12 +13,11 @@ const StoryList = ({items}) => {
           author={story.by}
           url={story.url}
           timestamp={story.time}
-          comments={story.kids}>
-        </StoryCard>
+          comments={story.kids}
+        />
       ))}
     </div>
-    </>
-  );
-};
+  </>
+);
 
 export default StoryList;

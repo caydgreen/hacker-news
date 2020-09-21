@@ -6,9 +6,9 @@ import hackerNews from '../constants/hackerNews';
 // so I have added a hack to always create a new app
 const firebaseApp = firebase.initializeApp(
   { databaseURL: hackerNews.DATABASE_URL },
-    `hackernews${Date.now()}`
-  );
+  `hackernews${Date.now()}`,
+);
 
-const base = Rebase.createClass(firebaseApp.database())
+const base = Rebase.createClass(firebaseApp.database());
 
 export default base;

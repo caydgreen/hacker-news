@@ -7,7 +7,9 @@ import CommentsList from '../CommentsList/CommentsList';
 
 import styles from './StoryCard.module.css';
 
-const StoryCard = ({id, title, author, url, timestamp, comments}) => {
+const StoryCard = ({
+  id, title, author, url, timestamp, comments,
+}) => {
   const [showComments, setShowComments] = useState(false);
   const [commentsList, setCommentsList] = useState([]);
   const [commentsLoading, setCommentsLoading] = useState(false);
@@ -24,32 +26,29 @@ const StoryCard = ({id, title, author, url, timestamp, comments}) => {
   const fetchComments = (commentIds) => {
     setCommentsLoading(true);
     // Get last five comments
-    let latestComments = commentIds.slice(0, 5).map(id => fetchComment(id));
-    let results = Promise.all(latestComments);
-    results.then(data => {
-        setCommentsList(data);
-        setCommentsLoading(false);
-        setShowComments(!showComments);
-      }
-    );
+    const latestComments = commentIds.slice(0, 5).map((id) => fetchComment(id));
+    const results = Promise.all(latestComments);
+    results.then((data) => {
+      setCommentsList(data);
+      setCommentsLoading(false);
+      setShowComments(!showComments);
+    });
   };
 
-  const fetchComment = (id) => {
+  const fetchComment = (id) =>
     // TODO: use fetchy
-    return new Promise(resolve => {
+    new Promise((resolve) => {
       firebase.fetch(`/${hackerNews.DB_VERSION}/item/${id}`, {
         then(data) {
-          let item = data;
-          console.log('single', item)
+          const item = data;
+          console.log('single', item);
           resolve(item);
         },
         // TODO: handle error
       });
     });
-  };
-
   return (
-    <div  className={styles.card}>
+    <div className={styles.card}>
       <a href={url} className={styles.title}>
         <h2>
           {title}
@@ -57,28 +56,32 @@ const StoryCard = ({id, title, author, url, timestamp, comments}) => {
       </a>
       <div className={styles.info}>
         <div className={styles.author}>
-          by: {author}
+          by:
+          {' '}
+          {author}
         </div>
         <div className={styles.timestamp}>
           {new Date(timestamp).toLocaleTimeString()}
         </div>
       </div>
       {commentCount >= 1 && (
-        <Button
-          onClick={() => toggleComments(comments)}>
-          {showComments ? 'Collapse Comments' : `Comments (${commentCount})`}
-        </Button>
+      <Button
+        onClick={() => toggleComments(comments)}
+      >
+        {showComments ? 'Collapse Comments' : `Comments (${commentCount})`}
+      </Button>
       )}
       {commentsLoading && (
-        <Loader
-          type="ThreeDots"
-          color="#00BFFF"
-          height={40}
-          width={40}
-          className={styles.loader} />
+      <Loader
+        type="ThreeDots"
+        color="#00BFFF"
+        height={40}
+        width={40}
+        className={styles.loader}
+      />
       )}
       {showComments && (
-        <CommentsList items={commentsList} />
+      <CommentsList items={commentsList} />
       )}
     </div>
   );
