@@ -24,10 +24,6 @@ Created by Cayla Green using next.js
 node -v
 npm -v
 ```
-- if you do not have node, install:
-```
-npm install npm@latest -g
-```
 - change to project directory and run dev
 ```bash
 cd hacker-news-master
