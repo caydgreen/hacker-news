@@ -41,7 +41,6 @@ const StoryCard = ({
       firebase.fetch(`/${hackerNews.DB_VERSION}/item/${id}`, {
         then(data) {
           const item = data;
-          console.log('single', item);
           resolve(item);
         },
         // TODO: handle error
@@ -49,7 +48,12 @@ const StoryCard = ({
     });
   return (
     <div className={styles.card}>
-      <a href={url} className={styles.title}>
+      <a
+        rel="noreferrer noopener"
+        href={url}
+        target="_blank"
+        className={styles.title}
+      >
         <h2>
           {title}
         </h2>
@@ -65,11 +69,12 @@ const StoryCard = ({
         </div>
       </div>
       {commentCount >= 1 && (
-      <Button
-        onClick={() => toggleComments(comments)}
-      >
-        {showComments ? 'Collapse Comments' : `Comments (${commentCount})`}
-      </Button>
+        <Button
+          className={styles.commentButton}
+          onClick={() => toggleComments(comments)}
+        >
+          {showComments ? 'Collapse Comments' : `Comments (${commentCount})`}
+        </Button>
       )}
       {commentsLoading && (
       <Loader
@@ -81,7 +86,7 @@ const StoryCard = ({
       />
       )}
       {showComments && (
-      <CommentsList items={commentsList} />
+        <CommentsList items={commentsList} />
       )}
     </div>
   );

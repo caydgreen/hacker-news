@@ -1,0 +1,6 @@
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}

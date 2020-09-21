@@ -1,8 +1,8 @@
 .comment {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-  flex-basis: 45%;
+  width: 100%;
+  margin: .5rem;
   padding: .5rem;
   text-align: left;
   color: inherit;
@@ -18,4 +18,15 @@
   justify-content: flex-start;
   font-size: .75rem;
   padding-bottom: 12px;
+}
+
+.author {
+  padding-right: 15px;
+}
+
+.text {
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

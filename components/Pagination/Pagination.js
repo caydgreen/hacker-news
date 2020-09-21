@@ -18,19 +18,19 @@ const Pagination = ({
       </div>
       <div className={styles.pageLimit}>
         <Button
-          selected={currentLimit === 10}
+          active={currentLimit === 10}
           onClick={() => updateStoriesPerPage(10)}
         >
           10
         </Button>
         <Button
-          selected={currentLimit === 25}
+          active={currentLimit === 25}
           onClick={() => updateStoriesPerPage(25)}
         >
           25
         </Button>
         <Button
-          selected={currentLimit === 50}
+          active={currentLimit === 50}
           onClick={() => updateStoriesPerPage(50)}
         >
           50

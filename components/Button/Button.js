@@ -7,10 +7,11 @@ const Button = ({
     href={link}
     className={[
       styles.button,
-      styles[active],
+      active && styles.active,
     ].join(' ')}
     disabled={disabled}
     onClick={onClick}
+    type="button"
   >
     {children}
   </button>

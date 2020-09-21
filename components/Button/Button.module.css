@@ -1,6 +1,5 @@
 .button {
   margin: 1rem;
-  flex-basis: 45%;
   padding: .75rem;
   text-align: center;
   color: inherit;
@@ -11,12 +10,11 @@
 }
 
 .button:hover:not([disabled]),
-.button:focus:not([disabled]),
-.button:active {
+.button:focus:not([disabled]) {
   color: #0070f3;
   border-color: #0070f3;
 }
 
-.active {
+.button.active {
   color: #0070f3;
 }

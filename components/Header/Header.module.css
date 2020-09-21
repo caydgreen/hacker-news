@@ -1,0 +1,24 @@
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: #0070f3;
+  color: white;
+}
+
+.headerControls {
+  position: fixed;
+  top: 0;
+  background: #0070f3;
+  width: 100%;
+  height: 3rem;
+}
+
+.menuHeader {
+  position: fixed;
+  top: 0;
+  background: #0070f3;
+  width: 100%;
+  height: 3rem;
+}
