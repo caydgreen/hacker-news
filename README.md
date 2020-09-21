@@ -1,5 +1,10 @@
 Created by Cayla Green using next.js
 
+## System Requirements
+
+- Node.js 10.13 or later
+- MacOS, Windows (including WSL), and Linux are supported
+
 ## Prompt
 
 - Display stories in a paginated fashion, being able to select between showing 10, 25, or 50 stories per page
