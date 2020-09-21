@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "firebase": "^7.21.0",
+    "jest-css-modules-transform": "^4.0.1",
     "next": "9.5.3",
     "re-base": "^4.0.0",
     "react": "16.13.1",
@@ -16,11 +18,13 @@
     "react-loader-spinner": "^3.1.14"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.0.4",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.2"
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "jest": "^26.4.2"
   }
 }

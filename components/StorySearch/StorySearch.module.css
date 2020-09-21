@@ -12,7 +12,14 @@
   color: white;
 }
 
+.searchBar:hover,
+.searchBar:focus {
+  border: 1.5px solid #009688;
+  background-color: white;
+}
+
 .results {
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
 }

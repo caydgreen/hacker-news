@@ -9,21 +9,21 @@ const StorySearch = ({ items }) => {
   };
 
   useEffect(() => {
-    const results = items.filter((story) => story.title.toLowerCase().match(`\\b${searchTerm}`));
+    const results = items
+      .filter((story) => story.title.toLowerCase().match(`\\b${searchTerm}`));
 
     updateSearchResults(results);
   }, [searchTerm]);
 
   return (
     <div className={styles.storySearch}>
-      <form>
-        <input
-          type="text"
-          placeholder="Search stories..."
-          value={searchTerm}
-          onChange={handleInputChange}
-        />
-      </form>
+      <input
+        type="search"
+        placeholder="Search stories..."
+        className={styles.seatchBar}
+        value={searchTerm}
+        onChange={handleInputChange}
+      />
       {searchResults.length >= 1 && searchTerm !== '' && (
         <div className={styles.results}>
           {searchResults.map((story) => (

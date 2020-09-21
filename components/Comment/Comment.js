@@ -13,7 +13,8 @@ const Comment = ({
       </div>
     </div>
     <div className={styles.text}>
-      {text}
+      {/* Replace this with a library to strip tags */}
+      <div dangerouslySetInnerHTML={{ __html: text }} />
     </div>
   </div>
 );
