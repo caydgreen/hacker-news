@@ -27,6 +27,7 @@ npm -v
 - change to project directory and run dev
 ```bash
 cd hacker-news-master
+yarn install
 yarn run dev
 ```
 - open http://localhost:3000/
